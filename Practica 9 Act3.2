@@ -1,0 +1,59 @@
+@startuml
+package "Clase Animal" #DDDDDD {
+    
+
+    class Animal {
+        {Field}Nombre : String
+        Origen : String
+        Color : String
+        {Method}Sonido(String): Void
+        Comer(): Void
+    }
+    class AnimalTerrestre {
+        {Field}NumPatas: int
+        {Method}Correr(): Void
+        Respirar():: Void
+        Comer(): Void
+    }
+    class AnimalAcuatico {
+        {Field}NumAletas: int
+        {Method}Nadar(): Void
+        Respirar():: Void
+        Comer(): Void
+    }
+
+    class AnimalAereo {
+        {Field}NumAlas: int
+        {Method}Volar(): Void
+        Respirar():: Void
+        Comer(): Void
+    }
+
+    class Ballena {
+        {Field}Largo : int
+        {Method}Fertilizar(): Void
+    }
+
+    class Perro {
+        {Field}NumManchas : int
+        {Method}CuidarCasa(): Void
+    }
+
+    class Pajaro {
+        {Field}TipoPico : String
+        {Method}Cantar(): Void
+    }
+
+    Animal <|-- AnimalTerrestre
+    Animal <|-- AnimalAcuatico
+    Animal <|-- AnimalAereo
+    AnimalTerrestre <|-- Perro
+    AnimalAcuatico <|-- Ballena
+    AnimalAereo <|-- Pajaro
+
+
+
+
+
+}
+@enduml
