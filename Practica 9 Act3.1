@@ -1,0 +1,24 @@
+@startuml
+package "Clase Empleado" #DDDDDD {
+    
+
+    class Empleado {
+        {Field}NumEmpleado : int
+        Nombre : String
+        Sueldo : int
+        {Method}AumentoSueldo(): int
+    }
+    class Gerente {
+        {Field}Presupuesto: int
+        {Method}AsignarPresupuesto(): int
+    }
+    
+
+    Empleado <|-right- Gerente
+
+
+
+
+
+}
+@enduml
